@@ -45,7 +45,7 @@ pipeline {
         stage('Docker Run') {
             steps {
                 sh "docker rm -f nginx-aritz"
-                sh "docker run -d -p ${publicPort}:80 --name docker rm -f nginx-aritz ${imageName}:latest"
+                sh "docker run -d -p ${publicPort}:80 --name nginx-aritz ${imageName}:latest"
             }
         }
     }
